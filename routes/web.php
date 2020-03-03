@@ -17,8 +17,27 @@ Route::get('/', function () {
 
 Route::get('tareas', function($nombre)
 {   $nombre = strtoupper($nombre);
-    return view ('tareas.tareasIndex')->with(['nombre'=>$nombre]);
+    return view ('tareasIndex')->with(['nombre'=>$nombre]);
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource("tareas", "tareaController");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

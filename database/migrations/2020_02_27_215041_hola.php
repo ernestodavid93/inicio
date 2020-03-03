@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Tabla extends Migration
+class Hola extends Migration
 {
     /**
      * Run the migrations.
@@ -15,8 +15,13 @@ class Tabla extends Migration
     {
         Schema::create('tareas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre_tarea');
-            $table->date
+            $table->text('nombre');
+            $table->text('prioridad');
+            $table->date('fechainicio');
+            $table->date('fechafin');
+            $table->text('descripcion');
+           
+            $table->timestamps();
         });
     }
 
@@ -27,6 +32,6 @@ class Tabla extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('crear_tabla');
+        //
     }
 }

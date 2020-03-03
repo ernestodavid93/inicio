@@ -1,11 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Dashboard
+                
+                    <div> listado de clases </div>
+                        <a href="{{action('tareaController@create')}}">Nueva tarea</a>
+                        <table class="table">
+                        
+                            <tr>
+                                <th>ID</th>
+                                <th>Tarea</th>
+                                <th>Prioridad</th>
+                            </tr>
+                           
+                        </table>
+                    </div>   
+       
+                                
+            </div>
+        </div>
+    </div>
+</div>
